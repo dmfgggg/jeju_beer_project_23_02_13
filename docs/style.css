@@ -1,0 +1,504 @@
+@font-face {
+	font-family: 'GmarketSansMedium';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html > body {
+	font-family: 'GmarketSansMedium';
+}
+
+:root{
+	--mobile-con-width:1100px;
+	
+}
+
+/* lib */
+.con{
+	max-width:1200px;
+}
+
+/* lib */
+.pc-section-banner-con {
+	max-width: 1200px;
+}
+
+.mobile-section-banner-con {
+	max-width: 760px;
+}
+
+.footer-con {
+	max-width: 1890px;
+}
+
+/* custom */
+
+.top-bar__section01 .logo > img{
+	width:71px;
+	height:94px;
+}
+/*a에 이름을 붙히는편. 링크클릭할때 범위 설정하는것때뭉에 그런듯?*/
+
+
+.top-bar__widget--data >ul >li>a{
+	
+	padding:0 7px;
+	font-size:12px;
+	transition: color .4s;
+	color:rgba(136, 136, 136, 1);
+	}
+
+.top-bar__widget--data >ul >li:hover>a{
+		color:rgba(136, 136, 136, 0.5);
+
+	}
+
+.top-bar__widjet-btn-group  .group-1, .top-bar__widjet-btn-group  .group-2{
+	
+	border-radius: 30px;
+  padding: 7px 20px 5px 20px !important;
+  font-size: 14px !important;
+	font-weight: 700;}
+
+.top-bar__widjet-btn-group  .group-1{
+	 background-color: #ff7e6b;
+    color: #ffffff !important;
+    border-color: #ff7e6b;
+	border-width: 1px;
+	transition: all .4s;}
+   
+.top-bar__widjet-btn-group  .group-1:hover{
+  	background-color: #ffffff;
+    color: #ff7e6b !important;
+    border-color: #ff7e6b;
+    border-width: 1px;
+}
+
+.top-bar__widjet-btn-group  .group-2{
+	  background-color: #10adb5;
+    color: #fff;
+    border-color: #10adb5;
+    border-width: 1px;
+		transition: all .4s;
+}
+
+.top-bar__widjet-btn-group  .group-2:hover{
+	  background-color: #1ecad3;
+    color: #fff !important;
+    border-color: #1ecad3;
+    border-width: 1px;
+    border-radius: ;
+}
+
+.top-bar__menu-list > ul >li >a{
+	
+	padding:0 35px;
+	color: #212121;
+	transition:color .4s;
+	font-size: 14px;
+}
+
+.top-bar__menu-list > ul >li:hover >a{
+	
+color: rgba(33, 33, 33, 0.5);
+	
+}
+
+
+/*mobile-top-bar*/
+
+.mobile-top-bar__logo> a > img{
+	
+	width:104px;
+	height:24px
+	
+}
+
+@media(min-width:767px){
+	
+	.mobile-top-bar{
+		display:none;
+	}
+	
+}
+
+@media(max-width:767px){
+	
+	.top-bar{
+		display:none;
+	}
+	
+}
+
+
+
+/*
+반응형
+
+1. pc가 화면이 줄어들때, 모바일로 바꿔지는것
+
+: 메뉴형태가 바뀌는것.
+> 메뉴를 아예 2개를 만든다. > 2개만들어서 미디어쿼리로 교체한다 
+pc탑바와 모바일탑바 
+
+반응형할때는 콘민위드안씀 
+
+container> 반응형이아니라 적응형이다 
+
+반응형>max-width:00만넘지마(1200이라면 그것만 넘지마)
+적응형>화면이 줄고할때마다 뚝뚝 끊기는 것처럼 달라지는것
+
+1. max width min width차이점아리까리함 
+
+--
+
+모작하는방법
+
+1. 무작정 따라한다고해서 모작하는건아님...
+
+2. 계획을 세우고 계획에 맞게 진행
+
+3.
+
+
+1. 웹사이트분석 
+-목표: 탑바 레이아웃 잡기(마크업, 간단한 배치)
+개발자도구 : 누르면 떼어낼수 있음 > 어떤 구조로 이뤄져있는지 판단을 해야함(wrap은 감쌀때 쓰는거)
+
+
+---
+con conminwidth
+
+min-width
+max-width
+이거 잘모르겠당
+ㅎㅎ
+
+
+/*
+
+
+*/
+
+/* lib */
+.con {
+  width:var(--site-width);
+}
+
+.con-min-width {
+  min-width:var(--site-width);
+}
+
+/* custom */
+:root {
+  --site-width:800px;
+}
+
+@media ( min-width:767px ) {
+  .mobile-section {
+    display:none;
+  }
+}
+
+@media ( max-width:767px ) {
+  .pc-section {
+    display:none;
+  }
+}
+
+/*
+크롬정책상 동영상소리가 있는 상태에선 자동재생이 되지않음.
+그러니 muted 추가해두도록.
+*/
+
+
+/* custom */
+
+
+/*pc section banner 시작*/
+
+/*공통부분 시작*/
+.pc-section-banner-wrap .section-banner{
+	height: 593px;
+	background-size:cover; 
+	background-position:50% 50%;
+	background-repeat: no-repeat; 
+	width:100%;
+}
+
+.pc-section-banner-wrap .section-banner__image-box img {
+	width:200px;
+}
+
+.pc-section-banner-wrap .section-banner__txt-box span{
+	display:block;
+	font-size:18px;
+	color:white;
+}
+/*공통부분 끝*/
+
+.pc-section-banner-wrap .section-banner01{
+	background-image:url('images/375dc88d2890e.png');
+}
+
+.pc-section-banner-wrap .section-banner01__logo > img{
+	height: 173px;
+}
+
+.pc-section-banner-wrap .section-banner02{
+	background-image:url('images/86ac866da3a0d.png');
+}
+
+.pc-section-banner-wrap .section-banner02__logo > img{
+	height: 91px;
+}
+
+.pc-section-banner-wrap .section-banner03 {
+	background-image:url('images/90b93bf672e6a.png'); 
+}
+
+.pc-section-banner-wrap .section-banner03__logo > img{
+	height: 86px;
+}
+
+.pc-section-banner-wrap .section-banner04 {
+	background-image:url('images/0d89208feb8c5.png');
+}
+
+.pc-section-banner-wrap .section-banner04__logo > img{
+	height: 84px;
+}
+/*pc section banner 끝*/
+
+
+
+
+/*모바일 섹션배너시작*/
+
+
+/*공통부분시작*/
+
+.mobile-section-banner-wrap .section-banner {
+	height:694px;
+	background-position:50% 50%;  
+	background-size:cover; 
+	background-repeat: no-repeat; 
+	width:100%;
+}
+
+.mobile-section-banner-wrap .section-banner__image-box > img{
+	height:272px;
+}
+
+.mobile-section-banner-wrap .section-banner__txt-box {
+	text-align:center;
+}
+
+.mobile-section-banner-wrap .section-banner__txt-box > span{
+	display:block;
+	color:white;
+	font-size: 20px;
+	letter-spacing: -0.5px;
+}
+
+
+/*공통부분끝*/
+
+.mobile-section-banner-wrap .section-banner01{
+	background-image:url('images/8dfcd51abd898.png'); 
+}
+
+.mobile-section-banner-wrap .section-banner01__logo{
+	height: 142px;
+}
+
+.mobile-section-banner-wrap .section-banner02{
+	background-image:url('images/80e0b09b92e18.png'); 
+}
+
+.mobile-section-banner-wrap .section-banner02__logo{
+	height:98px;
+}
+
+.mobile-section-banner-wrap .section-banner03{
+	background-image:url('images/4bf817b4eb447.png'); 
+}
+
+.mobile-section-banner-wrap .section-banner03__logo{
+	height:98px;
+}
+
+.mobile-section-banner-wrap .section-banner04{
+	background-image:url('images/e03e67c0d71c9.png'); 
+}
+
+.mobile-section-banner-wrap .section-banner04__logo{
+	height:98px;
+}
+
+/*모바일 섹션배너끝*/
+
+
+
+/*미디어 쿼리*/
+
+@media(min-width:760px){
+	.mobile-section-banner-wrap{display:none;}
+}
+
+
+@media(max-width:760px){
+	.pc-section-banner-wrap{display:none;}
+
+}
+
+
+/*pc-section-interactive-banner구현 시작*/
+
+/* custom */
+.pc-section-interactive-banner .carousel-item {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	min-height: 59px;
+	width: 155px;
+}
+
+.pc-section-interactive-banner .carousel-item:nth-child(1) {
+	background-image: url(images/6cff932165c24.jpg);
+	width: 180px;
+}
+
+.pc-section-interactive-banner .carousel-item:nth-child(2) {
+	background-image: url(images/7434b6388c3f7.jpg);
+	width: 200px;
+}
+
+.pc-section-interactive-banner .carousel-item:nth-child(3) {
+	background-image: url(images/b20f4b0daca42.jpg);
+}
+
+.pc-section-interactive-banner .carousel-item:nth-child(4) {
+	background-image: url(images/636fefe3f41d8.jpg);
+}
+
+.pc-section-interactive-banner .carousel-item:nth-child(5) {
+	background-image: url(images/a0c6a623cf42e.jpg);
+	width: 180px;
+}
+
+.pc-section-interactive-banner .carousel-item:nth-child(6) {
+	background-image: url(images/187f0b5636736.jpg);
+}
+/*pc-section-interactive-banner 구현 끝*/
+
+
+/* mob-section-interactive-banner 구현 시작 */
+
+.mob-section-interactive-banner .carousel-item {
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	min-height: 136px;
+	width: 300px;
+}
+
+.mob-section-interactive-banner .carousel-item:nth-child(1) {
+	background-image: url(images/636fefe3f41d8.jpg);
+}
+
+.mob-section-interactive-banner .carousel-item:nth-child(2) {
+	background-image: url(images/a0c6a623cf42e.jpg);	
+}
+
+.mob-section-interactive-banner .carousel-item:nth-child(3) {
+	background-image: url(https://cdn.imweb.me/thumbnail/20210802/187f0b5636736.jpg);
+}
+
+/* mob-section-interactive-banner 구현 끝 */
+
+
+/* 화면 너비가 992px 이상일 때 */
+
+@media ( min-width: 992px ) {
+	.mob-section-interactive-banner {
+		display: none;
+	}
+}
+
+/* 화면 너비가 992px 이하일 때 */
+@media ( max-width: 992px ) and ( min-width: 768px ) {
+	.pc-section-interactive-banner {
+		display: none;
+	}
+}
+
+@media ( max-width: 768px ) {
+	.pc-section-interactive-banner {
+		display: none;
+	}
+	
+	.section-interactive-banner__main-txt > p {
+		font-size: 15px !important;
+	}
+}
+
+
+
+/*footer 구현 시작 */
+
+/* custom */
+
+.footer-info__servie-link > ul > li > a {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	padding: 0 10px;
+	color: #999;
+}
+
+.footer-info__servie-link > ul > li:nth-last-child(2) > a {
+	color: black;
+}
+
+.footer-info__btn-wrap > ul > li > a {
+	display: flex;
+	font-size: 14px;
+	height: 100%;
+	align-items: center;
+	padding: 0 5px;
+}
+
+.footer-info__btn-wrap > ul > li > a > img {
+	height: 40px;
+}
+
+.info-busi > p {
+	font-size: 14px;
+	color: #999;
+}
+
+.copy-right {
+	font-size: 14px;
+	color: #999;
+	font-weight: bold;
+}
+
+/* footer 구현 끝 */
+
+/* 화면 너비가 992px 이상일 때 */
+@media ( min-width: 992px ) {
+	.mobile-footer-bar {
+		display: none;
+	}
+}
+
+/* 화면 너비가 992px 이하일 때 */
+@media ( max-width: 992px ) {
+	.pc-footer-bar {
+		display: none;
+	}
+}
+
+
